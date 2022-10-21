@@ -63,8 +63,8 @@ def query_es(cuisine):
     # Elasticsearch 6.x requires an explicit Content-Type header
     headers = { "Content-Type": "application/json" }
 
-    # Make the signed HTTP request
-    response = requests.get(url, auth=('mx608', '!Xmcc891001'), data=json.dumps(query), headers=headers)
+    # Make the signed HTTP request. Hide user info on purpose!!!
+    response = requests.get(url, auth=('xx', 'xx'), data=json.dumps(query), headers=headers)
     
     return json.loads(response.text)
 
